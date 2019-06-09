@@ -12,7 +12,7 @@ Ziheng Zhang*, Zhengxin Li*, Ning Bi, Jia Zheng, Jinlei Wang, Kun Huang, Weixin 
 
 ## Usage
 
-1. download the preprocessed *SIST-Wireframe* dataset here (still being upload).
+1. download the preprocessed *SIST-Wireframe* dataset here (still being uploaded).
 2. specify dataset path in the `train.sh` script.
 3. run `train.sh`
 
