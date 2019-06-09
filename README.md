@@ -10,11 +10,24 @@ Ziheng Zhang*, Zhengxin Li*, Ning Bi, Jia Zheng, Jinlei Wang, Kun Huang, Weixin 
 
 ![arch](https://www.researchgate.net/profile/Ziheng_Zhang3/publication/332977700/figure/fig2/AS:756853751427073@1557459404667/The-PPGNet-architecture-First-the-backbone-computes-shared-features-of-size-C-H-4-W_W640.jpg)
 
+## Requirements
+- Python >= 3.6
+- fire >= 0.1.3
+- numba >= 0.40.0
+- numpy >= 0.15.0
+- pytorch >= 0.4.1
+- scikit-learn >= 0.19.1
+- scipy >= 1.1.0
+- tensorboard >= 1.11.0
+- tensorboardX >= 1.4
+- torchvision >= 0.2.1
+
 ## Usage
 
-1. download the preprocessed *SIST-Wireframe* dataset here (still being uploaded).
-2. specify dataset path in the `train.sh` script.
-3. run `train.sh`
+1. clone this repository: `git clone https://github.com/svip-lab/PPGNet.git`
+2. download the preprocessed *SIST-Wireframe* dataset here (still being uploaded).
+3. specify the dataset path in the `train.sh` script.
+4. run `train.sh`.
 
 Please note that the code requires the GPU memory to be at least 24GB. For GPU with memory smaller than 24GB, you can change the `----block-inference-size` parameter in `train.sh` to be a smaller integer to avoid the out-of-memory error.
 
