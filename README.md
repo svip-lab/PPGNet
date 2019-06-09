@@ -25,7 +25,7 @@ Ziheng Zhang*, Zhengxin Li*, Ning Bi, Jia Zheng, Jinlei Wang, Kun Huang, Weixin 
 ## Usage
 
 1. clone this repository: `git clone https://github.com/svip-lab/PPGNet.git`
-2. download the preprocessed *SIST-Wireframe* dataset from BaiduPan (link: https://pan.baidu.com/s/1Sbdi1lL492fhmPL1t1Ov0w code:lnfp) or google drive (still being uploaded).
+2. download the preprocessed *SIST-Wireframe* dataset from BaiduPan (link: https://pan.baidu.com/s/1Sbdi1lL492fhmPL1t1Ov0w code:lnfp) or Google Drive (still being uploaded).
 3. specify the dataset path in the `train.sh` script.
 4. run `train.sh`.
 
