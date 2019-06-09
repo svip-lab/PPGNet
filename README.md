@@ -16,7 +16,7 @@ Ziheng Zhang*, Zhengxin Li*, Ning Bi, Jia Zheng, Jinlei Wang, Kun Huang, Weixin 
 2. specify dataset path in the `train.sh` script.
 3. run `train.sh`
 
-Please note that the code requires the GPU memory to be at least 24GB. For GPU with memory smaller than 24GB, you can change the `----block-inference-size` parameter to be a smaller integer to avoid the out-of-memory error.
+Please note that the code requires the GPU memory to be at least 24GB. For GPU with memory smaller than 24GB, you can change the `----block-inference-size` parameter in `train.sh` to be a smaller integer to avoid the out-of-memory error.
 
 ## Citation
 
