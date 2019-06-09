@@ -1,4 +1,4 @@
-# PPGNet
+# PPGNet: Learning Point-Pair Graph for Line Segment Detection
 
 PyTorch implementation of our CVPR 2019 paper:
 
