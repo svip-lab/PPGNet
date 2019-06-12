@@ -6,9 +6,9 @@ PyTorch implementation of our CVPR 2019 paper:
 
 Ziheng Zhang*, Zhengxin Li*, Ning Bi, Jia Zheng, Jinlei Wang, Kun Huang, Weixin Luo, Yanyu Xu, Shenghua Gao
 
-* New: The poster can be found [HERE](https://www.aiyoggle.me/publication/ppgnet-cvpr19).
-
 (\* Equal Contribution)
+\* New: The poster can be found [HERE](https://www.aiyoggle.me/publication/ppgnet-cvpr19).
+
 
 ![arch](https://www.researchgate.net/profile/Ziheng_Zhang3/publication/332977700/figure/fig2/AS:756853751427073@1557459404667/The-PPGNet-architecture-First-the-backbone-computes-shared-features-of-size-C-H-4-W_W640.jpg)
 
