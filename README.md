@@ -7,6 +7,7 @@ PyTorch implementation of our CVPR 2019 paper:
 Ziheng Zhang*, Zhengxin Li*, Ning Bi, Jia Zheng, Jinlei Wang, Kun Huang, Weixin Luo, Yanyu Xu, Shenghua Gao
 
 (\* Equal Contribution)
+
 \* New: The poster can be found [HERE](https://www.aiyoggle.me/publication/ppgnet-cvpr19).
 
 
