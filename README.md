@@ -2,9 +2,13 @@
 
 PyTorch implementation of our CVPR 2019 paper:
 
-[**PPGNet: Learning Point-Pair Graph for Line Segment Detection**](https://arxiv.org/pdf/1905.03415)
+[**PPGNet: Learning Point-Pair Graph for Line Segment Detection**](https://www.aiyoggle.me/publication/ppgnet-cvpr19/ppgnet-cvpr19.pdf)
 
 Ziheng Zhang*, Zhengxin Li*, Ning Bi, Jia Zheng, Jinlei Wang, Kun Huang, Weixin Luo, Yanyu Xu, Shenghua Gao
+
+**Note: This is an improved version of our paper, which fixed some errors in our camera ready version.**
+
+* New: The poster can be found [HERE](https://www.aiyoggle.me/publication/ppgnet-cvpr19).
 
 (\* Equal Contribution)
 
@@ -42,3 +46,4 @@ Please cite our paper for any purpose of usage.
   year={2019}
 }
 ```
+
