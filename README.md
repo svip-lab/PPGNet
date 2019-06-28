@@ -18,7 +18,7 @@ Ziheng Zhang*, Zhengxin Li*, Ning Bi, Jia Zheng, Jinlei Wang, Kun Huang, Weixin 
 - fire >= 0.1.3
 - numba >= 0.40.0
 - numpy >= 1.14.5
-- pytorch >= 0.4.1
+- pytorch = 0.4.1
 - scikit-learn = 0.19.2
 - scipy = 1.1.0
 - tensorboard >= 1.11.0
