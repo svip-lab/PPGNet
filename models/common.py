@@ -244,9 +244,11 @@ class GradAccumulator(nn.Module):
             assert all([isinstance(criterion_fn, nn.Module) for criterion_fn in criterion_fns])
         elif isinstance(criterion_fns, nn.Module):
             criterion_fns = [criterion_fns for _ in range(len(submodules))]
+        elif criterion_fns is None:
+            criterion_fns = [criterion_fns for _ in range(len(submodules))]
         else:
             raise ValueError("invalid criterion function")
-        assert reduce_method in ("mean", "sum")
+        assert reduce_method in ("mean", "sum", None)
 
         self.submodules = nn.ModuleList(submodules)
         self.criterion_fns = nn.ModuleList(criterion_fns)
@@ -277,18 +279,24 @@ class GradAccumulator(nn.Module):
                 output = submodule(*output)
             else:
                 output = submodule(output)
-            loss = criterion(output)
-            if self.method == "mean":
-                loss = loss / len(self.submodules)
+            if criterion is not None:
+                loss = criterion(output)
+                if self.method == "mean":
+                    loss = loss / len(self.submodules)
 
-            if mode == "accumulate" and torch.is_grad_enabled():
-                loss.backward()
-                loss = loss.detach()
+                if mode == "accumulate" and torch.is_grad_enabled():
+                    loss.backward()
+                    loss = loss.detach()
+
                 output = output.detach()
+                losses += loss
+            else:
+                assert not output.requires_grad, "criterion must be specified to calculate output gradient"
+
             outputs.append(output)
-            losses += loss
 
         if self.collect_fn is not None:
             with torch.no_grad():
                 outputs = self.collect_fn(outputs)
+
         return outputs, losses
