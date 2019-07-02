@@ -229,7 +229,7 @@ class LSDTrainer(object):
             model.zero_grad()
             loss_adj = loss_adj.mean()
             loss_hm = loss_hm.mean()
-            loss = loss_hm if self.is_train_junc else 0 + loss_adj if self.is_train_adj else 0
+            loss = (loss_hm if self.is_train_junc else 0) + (loss_adj if self.is_train_adj else 0)
             loss.backward()
             solver.step()
 
