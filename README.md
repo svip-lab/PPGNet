@@ -24,6 +24,7 @@ Ziheng Zhang*, Zhengxin Li*, Ning Bi, Jia Zheng, Jinlei Wang, Kun Huang, Weixin 
 - tensorboard >= 1.11.0
 - tensorboardX >= 1.4
 - torchvision >= 0.2.1
+- OpenCV >= 3.4.3
 
 ## Usage
 
