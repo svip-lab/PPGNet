@@ -30,7 +30,7 @@ Ziheng Zhang*, Zhengxin Li*, Ning Bi, Jia Zheng, Jinlei Wang, Kun Huang, Weixin 
 
 1. clone this repository (and make sure you fetch all .pth files right with [git-lfs](https://git-lfs.github.com/)): `git clone https://github.com/svip-lab/PPGNet.git`
 2. download the preprocessed *SIST-Wireframe* dataset from [BaiduPan](https://pan.baidu.com/s/1Sbdi1lL492fhmPL1t1Ov0w) (code:lnfp) or [Google Drive](https://drive.google.com/file/d/1KggPcHCRu8BcOqCvVZCXiB64y9L2nQDf/view?usp=sharing).
-3. specify the dataset path in the `train.sh` script.
+3. specify the dataset path in the `train.sh` script. (modify the --data-root parameter)
 4. run `train.sh`.
 
 Please note that the code requires the GPU memory to be at least 24GB. For GPU with memory smaller than 24GB, you can use a smaller batch with `--batch-size` parameter and/or change the `--block-inference-size` parameter in `train.sh` to be a smaller integer to avoid the out-of-memory error.
