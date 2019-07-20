@@ -100,7 +100,8 @@ class LSD(object):
 
         img = cv2.imread(path_to_image)
         img = cv2.resize(img, (self.img_size, self.img_size))
-        img = torch.from_numpy(img[:, :, ::-1]).float().permute(2, 0, 1).unsqueeze(0)
+        img_reverse = img[..., [2, 1, 0]]
+        img = torch.from_numpy(img_reverse).float().permute(2, 0, 1).unsqueeze(0)
 
         if self.is_cuda:
             img = img.cuda()
@@ -114,13 +115,13 @@ class LSD(object):
         adj_mtx = adj_mtx_pred.cpu().numpy()
 
         img_with_junc = draw_jucntions(img, junctions_pred)
-        img_with_junc = img_with_junc[0].numpy()[:, ::-1, :, :]
+        img_with_junc = img_with_junc[0].numpy()[None]
+        img_with_junc = img_with_junc[:, ::-1, :, :]
         lines_pred, score_pred = graph2line(junctions_pred, adj_mtx)
         vis_line_pred = draw_lines(img_with_junc, lines_pred, score_pred)[0]
+        vis_line_pred = vis_line_pred.permute(1, 2, 0).numpy()
 
         cv2.imshow("result", vis_line_pred)
-
-        return self
 
 
 if __name__ == "__main__":
