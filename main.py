@@ -112,6 +112,8 @@ class LSDTrainer(object):
             phase="train",
             sigma_junction=junc_sigma,
             max_junctions=max_junctions)
+                  
+        assert len(self.train_data) > 0, "Wow, there is nothing in your data folder. Please check the --data-root parameter in your train.sh."
 
         self.train_loader = DataLoader(
             self.train_data,
