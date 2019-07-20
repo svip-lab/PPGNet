@@ -12,6 +12,7 @@ The poster can be found [HERE](https://www.aiyoggle.me/publication/ppgnet-cvpr19
 
 
 ![pipe-line](https://svip-lab.github.io/img/project/cvpr2019_zhangzh1.png)
+**Demonstraton of juncton-line graph representaton G={V, E}. (a) an sample image patch with 10 junctons (V); (b) the graph which describes the connectvity of all junctons (G); (c) the adjacency matrix of all junctons (E, black means the junction pair is connected).** 
 
 ## Requirements
 - Python >= 3.6
