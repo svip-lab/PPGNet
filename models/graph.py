@@ -39,6 +39,7 @@ class JunctionInference(nn.Module):
                 continue
             junc_score = torch.from_numpy(score).to(feat)
             _, ind = torch.sort(junc_score, descending=True)
+            ind = ind.cpu() 
             coord = coord[ind[:self.max_juncs]]
             coord = coord.reshape((-1, 2))
             y, x = coord[:, 0], coord[:, 1]
